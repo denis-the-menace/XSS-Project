@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+#postForm{
+  font-size: 2rem;
+}
+
+#displayData{
+  align-self: flex-start;
+  font-size: 2rem;
+}
