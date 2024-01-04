@@ -1,21 +1,41 @@
-.container {
+.main-container{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.title {
+.main-title {
   font-size: 3rem;
   font-weight: 700;
   margin-bottom: 1rem;
 }
 
-#postForm{
+.post-form {
+  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.post-form__post-title,
+.post-form__post-content {
+  width: 100%;
+  box-sizing: border-box;
+  margin: 5px 0;
+}
+
+.post-form__post-submit {
+  margin-top: 0.25rem;
+  align-self: flex-end;
+}
+
+.posts-container{
+  align-self: flex-start;
   font-size: 2rem;
 }
 
-#displayData{
-  align-self: flex-start;
-  font-size: 2rem;
+.posts-container__post-container{
+  margin-bottom: 1rem;
 }

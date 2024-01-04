@@ -13,12 +13,12 @@ app.set("view engine", "ejs");
 app.set("views", __dirname + "/views");
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.get("/posts", async (req, res) => {
+app.get("/", async (req, res) => {
   const posts = await prisma.post.findMany();
-  res.render("posts", { posts });
+  res.render("index", { posts });
 });
 
-app.get("/api/posts", async (req, res) => {
+app.get("/posts", async (req, res) => {
   const posts = await prisma.post.findMany();
   res.json(posts);
 });
@@ -32,13 +32,14 @@ app.get("/posts/:id", async (req, res) => {
 });
 
 app.post("/posts", async (req, res) => {
-  const { title } = req.body;
+  const { title, content } = req.body;
   const newPost = await prisma.post.create({
     data: {
       title,
+      content,
     },
   });
-  res.redirect("/posts");
+  res.redirect("/");
 });
 
 app.put("/posts/:id", async (req, res) => {

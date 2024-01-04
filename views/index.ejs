@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="/styles/globals.css">
+    <link rel="stylesheet" href="/styles/posts.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="main-container">
+      <h1 class="main-title">Very Secure Website</h1>
+      <form class="post-form" action="/posts" method="post" onsubmit="return validateForm()">
+        <input type="text" id="post-title" class="post-form__post-title" name="title" placeholder="Title">
+        <textarea id="post-content" class="post-form__post-content" name="content" placeholder="Content"></textarea>
+        <button class="post-form__post-submit" type="submit">Submit</button>
+      </form>
+      <div id="posts" class="posts-container">
+      </div>
+    </div>
+  </body>
+</html>
+
